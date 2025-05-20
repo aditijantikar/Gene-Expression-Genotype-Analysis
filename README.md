@@ -8,10 +8,10 @@ The R Markdown notebook (`BGGN239_mcvicker_hw2.Rmd`) guides through reading samp
 
 ## 📁 Files in this Repository
 
-* **`BGGN239_mcvicker_hw2.Rmd`**: The R Markdown file containing the R code, exercises, and analysis steps.
-* **`samples.txt`**: A plain text file listing the sample IDs used in the analysis.
-* **`gene_expr_tpm.txt`**: A plain text file containing gene expression data, quantified in Transcripts Per Million (TPM), for the samples.
-* **`chr22_genotypes.txt`**: A plain text file containing genotype information for variants (likely SNPs) on chromosome 22 for the samples.
+* **`BGGN239_mcvicker_hw2.Rmd`**: The R Markdown file containing the R code, exercises, and analysis steps. This is the primary file to include directly in this GitHub repository.
+* **Large Data Files (`samples.txt`, `gene_expr_tpm.txt`, `chr22_genotypes.txt`):** Due to their size (or to keep all input data together), these core data files are hosted in a shared Google Drive folder.
+    * **Google Drive Folder Link:** `https://drive.google.com/drive/folders/1KWNZm0iYJAOdW3LzF-O3lRQ2GM5gBR-Z?usp=drive_link`
+    * Please find `samples.txt`, `gene_expr_tpm.txt`, and `chr22_genotypes.txt` within this folder.
 
 ## 🛠️ Tools & Technologies
 
@@ -23,15 +23,18 @@ The R Markdown notebook (`BGGN239_mcvicker_hw2.Rmd`) guides through reading samp
 
 1.  **Prerequisites:**
     * An R environment with R Markdown support (e.g., RStudio).
-2.  **To reproduce the analysis:**
+2.  **Download Data Files:**
+    * Go to the Google Drive Folder Link in the "Files in this Repository" section.
+    * Download `samples.txt`, `gene_expr_tpm.txt`, and `chr22_genotypes.txt`.
+    * Place these downloaded files into the same directory as the `BGGN239_mcvicker_hw2.Rmd` script (which is in this GitHub repository).
+3.  **To reproduce the analysis:**
     * Open `BGGN239_mcvicker_hw2.Rmd` in RStudio.
-    * Ensure the data files (`samples.txt`, `gene_expr_tpm.txt`, `chr22_genotypes.txt`) are in the same directory as the Rmd file, or update the file paths within the script if necessary.
-    * Run the R code chunks sequentially to perform the data loading and analysis exercises.
-
+    * Ensure the file paths within the script correctly point to the data files in the current directory.
+    * Run the R code chunks sequentially.
 ## ✨ Key Concepts Explored
 
 * Reading and integrating multiple bioinformatics data types: sample lists, gene expression matrices, and genotype data.
-* Subsetting and querying data based on genomic location (e.g., finding SNPs near a gene).
+* Subset and query data based on genomic location (e.g., finding SNPs near a gene).
 * Performing association tests between genotypes and quantitative traits (gene expression levels), a fundamental concept in eQTL analysis.
 * Data manipulation in R for bioinformatics.
 
