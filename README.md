@@ -10,7 +10,7 @@ The R Markdown notebook (`BGGN239_mcvicker_hw2.Rmd`) guides through reading samp
 
 * **`BGGN239_mcvicker_hw2.Rmd`**: The R Markdown file containing the R code, exercises, and analysis steps. This is the primary file to include directly in this GitHub repository.
 * **Large Data Files (`samples.txt`, `gene_expr_tpm.txt`, `chr22_genotypes.txt`):** Due to their size (or to keep all input data together), these core data files are hosted in a shared Google Drive folder.
-    * **Google Drive Folder Link:** `https://drive.google.com/drive/folders/1KWNZm0iYJAOdW3LzF-O3lRQ2GM5gBR-Z?usp=drive_link`
+    * **Google Drive Link:** [Access Data Files Here](https://drive.google.com/drive/folders/1KWNZm0iYJAOdW3LzF-O3lRQ2GM5gBR-Z?usp=drive_link)
     * Please find `samples.txt`, `gene_expr_tpm.txt`, and `chr22_genotypes.txt` within this folder.
 
 ## 🛠️ Tools & Technologies
