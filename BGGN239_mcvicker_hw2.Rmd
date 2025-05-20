@@ -1,0 +1,103 @@
+---
+title: "BGGN239 exercises - class 2"
+output: html_document
+date: '2023-04-19'
+---
+
+This homework uses the same gene expression and genotype data as the in class exercises.
+
+First read in all of the data.
+
+### Read samples 
+
+```{r}
+# use 'as.character' to make sure we have the sample names as a vector of character strings (rather than
+# a factor)
+sample.tab <- read.table("samples.txt", header=F)
+sample.names <- as.character(sample.tab$V1)
+head(sample.names)
+```
+
+### Read Genotypes
+
+```{r}
+genotypes.tab <- read.table("chr22_genotypes.txt", header=T)
+head(genotypes.tab)
+
+genotype.matrix <- genotypes.tab[,sample.names]
+head(genotype.matrix)
+
+```
+
+
+### Read gene expression data
+
+```{r}
+tpm.expr.tab <- read.table("gene_expr_tpm.txt", header=T)
+head(tpm.expr.tab)
+
+# also create a matrix that just the expression data, without other information:
+all.tpm.matrix <- tpm.expr.tab[,sample.names]
+```
+
+
+###  Exercise 1: 
+
+Retrieve the expression data and genotypes for gene ENSG00000069998 
+
+
+```{r}
+gene.name <- "ENSG00000069998"
+
+expr <- unlist(all.tpm.matrix[tpm.expr.tab$GENE.NAME == gene.name, sample.names])
+
+gene.row <- which(tpm.expr.tab$GENE.NAME == gene.name)
+start <- tpm.expr.tab$GENE.START[gene.row] - 50000
+end <- tpm.expr.tab$GENE.END[gene.row] + 50000
+
+snp.rows <- which(genotypes.tab$CHROM.POS >= start & genotypes.tab$CHROM.POS <= end)
+
+genotypes <- genotype.matrix[snp.rows,]
+```
+
+*1A (1 pt)* - How many SNPs are within 50kb of this gene?
+
+```{r}
+ # your code here
+```
+
+
+*1B (2 pt)* - Test whether the genotypes of the SNPs are associated with the expression of the gene and plot a histogram of the SNPs
+
+
+
+```{r}
+ # your code here
+```
+
+*1C (1 pt)* - Plot the genomic position of the SNPs (x-axis) against their significance (-log10 p-values on y-axis)
+
+
+
+
+```{r}
+ # your code here
+```
+
+*1D (1 pt)* - Plot a qqplot of -log10 expected vs. observed p-values
+
+
+
+
+```{r}
+ # your code here
+```
+
+*1D (2pt)* - Does this gene have an eQTL within 50kb of the gene? Explain your reasoning.
+
+
+*Answer:* [your answer here]
+
+
+
+
